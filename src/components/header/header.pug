@@ -1,0 +1,18 @@
+-
+  var menuItems = [
+    {'type': 'light', 'mode': 'день', 'isDisabled': false},
+    {'type': 'auto', 'mode': 'авто', 'isDisabled': true},
+    {'type': 'dark', 'mode': 'ночь', 'isDisabled': false}
+  ]
+
+header.header.decorated-zone 
+  nav.header__theme-menu
+    include ./__theme-menu-list/__theme-menu-list
+      block items
+        include ./__theme-menu-item/__theme-menu-item
+        each item in menuItems
+          +menu-item(item.type, item.mode, item.isDisabled)
+  h1.header__heading no focus
+  p.header__text Что делать, когда не можешь делать ничего
+    br
+    | Или почему нам так сложно сконцентрироваться, особенно когда очень надо

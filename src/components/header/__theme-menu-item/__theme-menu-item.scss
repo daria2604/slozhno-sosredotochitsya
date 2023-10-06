@@ -1,0 +1,22 @@
+.header__theme-menu-button {
+  height: 23px;
+  border: none;
+  padding: 0 13px;
+  background-color: transparent;
+  font-size: $font-size;
+  font-weight: $fw-regular;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+
+
+  &_active {
+    border: 1px solid $main-color-light;
+  }
+
+  &:hover {
+    opacity: .8;
+    transition: color .2s linear;
+  }
+}

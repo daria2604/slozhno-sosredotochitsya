@@ -1,0 +1,3 @@
+mixin menu-item(type, mode, isDisabled) 
+  li.header__theme-menu-item
+    button(class=`header__theme-menu-button header__theme-menu-button_type_${type}`)(disabled=isDisabled)= mode
