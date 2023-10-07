@@ -31,10 +31,16 @@
   &__link {
     text-decoration: none;
     text-shadow: 2px 1px 0px $accent-color;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: $border;
+      transition: border .2s linear;
+    }
 
     &:focus-visible {
       outline: none;
-      border: 2px solid $dark-color;
+      border: $border;
     }
   }
 

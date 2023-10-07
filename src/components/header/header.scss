@@ -33,4 +33,36 @@
     grid-area: text;
     margin-bottom: calc(31px + $decoration-size);
   }
+
+  &__decoration {
+    display: none;
+  }
+}
+
+.decorated-zone {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 10px;
+    width: $decoration-size;
+    height: $decoration-size;
+    border-top: $border;
+    border-right: $border;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    left: 10px;
+    width: $decoration-size;
+    height: $decoration-size;
+    border-bottom: $border;
+    border-left: $border;
+  }
 }
