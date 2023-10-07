@@ -1,0 +1,10 @@
+@import "../../styles/mixins/heading.scss";
+
+.footer {
+  &__heading {
+    @include heading;
+    text-shadow: 2px 2px 0px $accent-color-light;
+    padding: 285px 4px;
+    text-align: center;
+  }
+}

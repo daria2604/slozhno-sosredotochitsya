@@ -11,3 +11,8 @@ html(lang="ru")
     script(src="./scripts/script.js" defer)
   body.page 
     include ../components/header/header
+    main.content 
+      block sections
+        include ../components/content/content
+    include ../components/footer/footer
+

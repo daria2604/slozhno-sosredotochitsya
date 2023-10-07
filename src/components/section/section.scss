@@ -1,0 +1,49 @@
+@import "../../styles/mixins/font-main.scss";
+
+.section {
+
+  &__heading {
+    @include font-main;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: grid;
+    row-gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__content-grid {
+    margin-top: 20px;
+  }
+  
+  &__title {
+    @include font-main;
+    font-weight: 700;
+    background-color: $accent-color-light;
+  }
+
+  &__text {
+    @include font-main;
+    font-weight: 400;
+  }
+
+  &__link {
+    text-decoration: none;
+    text-shadow: 2px 1px 0px $accent-color-light;
+  }
+
+  &__sub-title {
+    @include font-main;
+    font-weight: 400;
+    background-color: $accent-color-light;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
