@@ -3,6 +3,8 @@
 @import "../styles/variables";
 @import "../styles/globals";
 @import "../styles/style";
+@import "../styles/dark.scss";
+@import "../styles/light.scss";
 
 @import "../components/header/header";
 @import "../components/header/__theme-menu-item/_theme-menu-item";

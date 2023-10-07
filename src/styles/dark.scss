@@ -1,12 +1,84 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+$dark-color: #000028;
+$heading-color: #db00ff;
+$accent-color: #ff0070;
+$light-color: #f1b2ce;
+$border: 1px solid $accent-color;
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  color: $accent-color;
+  background-color: $dark-color;
+
+  .decorated-zone {
+    &::after {
+      border-top: $border;
+      border-right: $border;
+    }
+  
+    &::before {
+      border-bottom: $border;
+      border-left: $border;
+    }
+  }
+
+  .header {
+    background-image: url(../../images/cover-image-dark.png);
+    
+    &__text {
+      background-color: $accent-color;
+    }
+
+    &__heading {
+      color: $heading-color;
+      text-shadow: 4px 4px 0px $accent-color;
+    }
+
+    &__theme-menu-button {
+      &_active {
+        border: 1px solid $accent-color;
+      }
+
+      &:focus-visible {
+        border: 1.5px solid $accent-color;
+      }
+    }
+  }
+
+  .section {
+    &__heading {
+      color: $accent-color;
+    }
+
+    &__title {
+      color: $dark-color;
+      background-color: $accent-color;
+    }
+
+    &__text {
+      color: $light-color;
+    }
+
+    &__link {
+      text-shadow: 2px 1px 0px $accent-color;
+    }
+
+    &__sub-title {
+      color: $dark-color;
+      background-color: $accent-color;
+    }
+  }
+
+  .footer {
+    &__heading {
+      color: $heading-color;
+      text-shadow: 2px 2px 0px $accent-color;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  $dark-color: #000028;
+  $heading-color: #db00ff;
+  $accent-color: #ff0070;
+  $light-color: #f1b2ce;
+  $border: 1px solid $accent-color;
 }

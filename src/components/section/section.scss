@@ -1,7 +1,6 @@
 @import "../../styles/mixins/font-main.scss";
 
 .section {
-
   &__heading {
     @include font-main;
     font-weight: 700;
@@ -21,7 +20,7 @@
   &__title {
     @include font-main;
     font-weight: 700;
-    background-color: $accent-color-light;
+    background-color: $accent-color;
   }
 
   &__text {
@@ -31,13 +30,18 @@
 
   &__link {
     text-decoration: none;
-    text-shadow: 2px 1px 0px $accent-color-light;
+    text-shadow: 2px 1px 0px $accent-color;
+
+    &:focus-visible {
+      outline: none;
+      border: 2px solid $dark-color;
+    }
   }
 
   &__sub-title {
     @include font-main;
     font-weight: 400;
-    background-color: $accent-color-light;
+    background-color: $accent-color;
   }
 
   &__grid {

@@ -5,6 +5,7 @@
   background-image: url(../../images/cover-image-light.png);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   padding: 10px;
   display: grid;
   grid-template-areas:
@@ -21,13 +22,13 @@
   &__heading {
     @include heading;
     grid-area: heading;
-    text-shadow: 4px 4px 0px $accent-color-light;
+    text-shadow: 4px 4px 0px $accent-color;
     margin: 65px 0 55px 0;
   }
 
   &__text {
     @include font-main;
-    background-color: $accent-color-light;
+    background-color: $accent-color;
     font-weight: 700;
     grid-area: text;
     margin-bottom: calc(31px + $decoration-size);

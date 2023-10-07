@@ -1,15 +1,6 @@
-// light theme
-$bg-main-color-light: #fff1f7;
-$heading-main-color-light: #ffc2e6;
-$accent-color-light: #ff8dcb;
-$main-color-light: #353430;
-$border-light: 1px solid $main-color-light;
-
-// dark theme
-$bg-main-color-dark: #000028;
-$heading-main-color-dark: #db00ff;
-$accent-color-dark: #ff0070;
-$main-color-dark: #f1b2ce;
-
+$light-color: #fff1f7;
+$heading-color: #ffc2e6;
+$accent-color: #ff8dcb;
+$dark-color: #353430;
+$border: 1px solid $dark-color;
 $decoration-size: 25px;
-

@@ -3,7 +3,7 @@
 .footer {
   &__heading {
     @include heading;
-    text-shadow: 2px 2px 0px $accent-color-light;
+    text-shadow: 2px 2px 0px $accent-color;
     padding: 285px 4px;
     text-align: center;
   }

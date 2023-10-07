@@ -12,11 +12,22 @@
 
 
   &_active {
-    border: 1px solid $main-color-light;
+    border: 1px solid $dark-color;
+    pointer-events: none;
+    cursor: none;
   }
 
   &:hover {
     opacity: .8;
     transition: color .2s linear;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 1.5px solid $dark-color;
   }
 }

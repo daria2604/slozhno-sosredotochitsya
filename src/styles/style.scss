@@ -1,7 +1,9 @@
+@import "../styles/variables.scss";
+
 .page {
   font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
-  color: $main-color-light;
-  background-color: $bg-main-color-light;
+  color: $dark-color;
+  background-color: $light-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -20,8 +22,8 @@
     right: 10px;
     width: $decoration-size;
     height: $decoration-size;
-    border-top: $border-light;
-    border-right: $border-light;
+    border-top: $border;
+    border-right: $border;
   }
 
   &::before {
@@ -32,7 +34,7 @@
     left: 10px;
     width: $decoration-size;
     height: $decoration-size;
-    border-bottom: $border-light;
-    border-left: $border-light;
+    border-bottom: $border;
+    border-left: $border;
   }
 }

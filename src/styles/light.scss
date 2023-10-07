@@ -1,13 +1,23 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+$light-color: #fff1f7;
+$heading-color: #ffc2e6;
+$accent-color: #ff8dcb;
+$dark-color: #353430;
+$border: 1px solid $dark-color;
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  background-color: $bg-main-color-light;
+  color: $dark-color;
+  background-color: $light-color;
+
+  .header {
+    background-image: url(../../images/cover-image-light.png);
+    
+    &__text {
+      background-color: $accent-color;
+    }
+
+    &__heading {
+      color: $heading-color;
+      text-shadow: 4px 4px 0px $accent-color;
+    }
+  }
 }
