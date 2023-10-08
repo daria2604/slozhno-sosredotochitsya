@@ -1,0 +1,6 @@
+@media (min-width: 700px) {
+  .section_type_how {
+    grid-template-columns: max-content 1fr;
+    gap: 20px;
+  }
+}

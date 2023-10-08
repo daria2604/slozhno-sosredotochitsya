@@ -1,6 +1,5 @@
 @mixin heading {
   color: $heading-color;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
   line-height: .96;

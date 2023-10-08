@@ -1,5 +1,40 @@
+@import "../../styles/mixins/font-main.scss";
+
 .content {
-  margin: 40px 10px;
-  display: grid;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+  &__title {
+    @include font-main;
+    font-weight: 700;
+    background-color: $accent-color;
+  }
+
+  &__sub-title {
+    @include font-main;
+    font-weight: 400;
+    background-color: $accent-color;
+  }
+
+  &__text {
+    @include font-main;
+    font-weight: 400;
+  }
+
+  &__link {
+    text-decoration: none;
+    text-shadow: 2px 1px 0px $accent-color;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: $border;
+      transition: border .2s linear;
+    }
+
+    &:focus-visible {
+      outline: none;
+      border: $border;
+    }
+  }
 }

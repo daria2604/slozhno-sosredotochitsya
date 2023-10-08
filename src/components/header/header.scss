@@ -7,12 +7,16 @@
   background-size: cover;
   background-attachment: fixed;
   padding: 10px;
-  display: grid;
-  grid-template-areas:
-    "buttons"
-    "heading"
-    "text"
-  ;
+  
+  &__content {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "buttons"
+        "heading"
+        "text";
+  }
 
   &__theme-menu {
     grid-area: buttons;
@@ -21,9 +25,11 @@
 
   &__heading {
     @include heading;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     grid-area: heading;
     text-shadow: 4px 4px 0px $accent-color;
     margin: 65px 0 55px 0;
+    line-height: 0.85;
   }
 
   &__text {
@@ -32,6 +38,7 @@
     font-weight: 700;
     grid-area: text;
     margin-bottom: calc(31px + $decoration-size);
+    justify-self: flex-end;
   }
 
   &__decoration {
@@ -64,5 +71,61 @@
     height: $decoration-size;
     border-bottom: $border;
     border-left: $border;
+  }
+}
+
+@media (min-width: 550px) {
+  .header {
+    &__heading {
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+    
+    &__text {
+      width: 364px;
+      margin-bottom: calc(138px + $decoration-size);
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .header {
+    padding: 20px 20px 20px 0;
+
+    &__theme-menu {
+      margin-top: calc(147px + $decoration-size);
+    }
+
+    &__heading {
+      margin: 175px 0 162px 0;
+    }
+  }
+
+  .decorated-zone {
+    &::after {
+      top: 20px;
+      right: 20px;
+    }
+  
+    &::before {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    &__theme-menu {
+      margin-top: 0;
+    }
+
+    &__heading {
+      margin: 273px 0 114px 0;
+    }
+
+    &__text {
+      width: 491px;
+      margin-bottom: calc(89px + $decoration-size);
+    }
   }
 }

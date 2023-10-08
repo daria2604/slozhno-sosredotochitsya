@@ -1,10 +1,33 @@
 @import "../../styles/mixins/heading.scss";
 
 .footer {
+  padding: 10px;
+
   &__heading {
     @include heading;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     text-shadow: 2px 2px 0px $accent-color;
-    padding: 285px 4px;
+    padding: calc(251px + $decoration-size) 4px;
     text-align: center;
+    line-height: 0.85;
+  }
+}
+
+@media (min-width: 700px) {
+  .footer {
+    padding: 20px;
+
+    &__heading {
+      padding: calc(418px + $decoration-size) calc(159px + $decoration-size);
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer {
+      &__heading{
+        padding: calc(274px + $decoration-size) calc(231px + $decoration-size);
+      }
+    }
   }
 }

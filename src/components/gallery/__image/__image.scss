@@ -1,0 +1,35 @@
+.gallery__image {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .image-sunset {
+    grid-column: 1 / 3;
+  }
+  
+  .image-ice-cream {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-tape {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-street {
+    grid-column: 2 / 4;
+    grid-row: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-street {
+    margin-top: 5px;
+  }
+}

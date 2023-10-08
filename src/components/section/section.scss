@@ -1,6 +1,8 @@
 @import "../../styles/mixins/font-main.scss";
 
 .section {
+  display: grid;
+  
   &__heading {
     @include font-main;
     font-weight: 700;
@@ -9,8 +11,7 @@
 
   &__content {
     display: grid;
-    row-gap: 10px;
-    margin-bottom: 20px;
+    row-gap: 50px;
   }
 
   &__content-grid {
@@ -23,37 +24,24 @@
     background-color: $accent-color;
   }
 
-  &__text {
-    @include font-main;
-    font-weight: 400;
-  }
-
-  &__link {
-    text-decoration: none;
-    text-shadow: 2px 1px 0px $accent-color;
-    border-bottom: 1px solid transparent;
-
-    &:hover {
-      border-bottom: $border;
-      transition: border .2s linear;
-    }
-
-    &:focus-visible {
-      outline: none;
-      border: $border;
-    }
-  }
-
-  &__sub-title {
-    @include font-main;
-    font-weight: 400;
-    background-color: $accent-color;
-  }
-
-  &__grid {
+  &__content-list {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .section {
+    &__heading {
+      width: 236px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    &__heading {
+      width: 315px;
+    }
   }
 }

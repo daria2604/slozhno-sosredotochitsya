@@ -3,16 +3,23 @@
 @import "../styles/variables";
 @import "../styles/globals";
 @import "../styles/style";
-@import "../styles/dark.scss";
-@import "../styles/light.scss";
+@import "../styles/dark";
+@import "../styles/light";
 
 @import "../components/header/header";
 @import "../components/header/__theme-menu-item/_theme-menu-item";
 @import "../components/header/__theme-menu-list/_theme-menu-list";
 
-@import "../components/content/content";
+@import "../components/main/main";
 
 @import "../components/section/section";
-@import "../components/section/__image/_image";
+@import "../components/section/_type/why";
+@import "../components/section/_type/what";
+@import "../components/section/_type/how";
 
-@import "../components/footer/footer.scss";
+@import "../components/gallery/gallery.scss";
+@import "../components/gallery/__image/_image";
+
+@import "../components/content/content";
+
+@import "../components/footer/footer";

@@ -72,6 +72,13 @@ $border: 1px solid $accent-color;
       box-shadow: 0px 0px 5px 3px #FF0070;
       
     }
+
+    @media (min-width: 700px) {
+      &__decoration {
+        top: 20px;
+        right: 29px;
+      }
+    }
   }
 
   .section {
@@ -80,6 +87,18 @@ $border: 1px solid $accent-color;
     }
 
     &__title {
+      color: $dark-color;
+      background-color: $accent-color;
+    }
+  }
+
+  .content {
+    &__title {
+      color: $dark-color;
+      background-color: $accent-color;
+    }
+
+    &__sub-title {
       color: $dark-color;
       background-color: $accent-color;
     }
@@ -98,12 +117,6 @@ $border: 1px solid $accent-color;
       &:focus-visible {
         border: 1px solid $light-color;
       }
-  
-    }
-
-    &__sub-title {
-      color: $dark-color;
-      background-color: $accent-color;
     }
   }
 
